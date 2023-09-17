@@ -1,0 +1,32 @@
+{
+  "name": "jsdoc-package-starter",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "files": [
+    "src",
+    "types"
+  ],
+  "devDependencies": {
+    "dts-buddy": "^0.2.4",
+    "typescript": "^5.0.0",
+    "@changesets/cli": "^2.26.2"
+  },
+  "scripts": {
+    "lint": "tsc",
+    "release": "changeset publish",
+    "prepublishOnly": "dts-buddy"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@8.6.12",
+  "license": "MIT"
+}
